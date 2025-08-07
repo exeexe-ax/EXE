@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda de Dragones</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- 🧙 Menú principal -->
+  <header>
+    <h1>Tienda de Dragones</h1>
+    <nav>
+      <label for="playerID">Ingresa tu ID de jugador:</label>
+      <input type="text" id="playerID" placeholder="Ej. 123456789">
+      <button onclick="validarID()">Ingresar</button>
+    </nav>
+  </header>
+
+  <!-- 🖼️ Slider desplegable -->
+  <section id="slider" class="slider-container">
+    <button class="prev" onclick="moverSlide(-1)">❮</button>
+    <div class="slides">
+      <img src="1.1.jpg" alt="Familia Estrategas">
+      <img src="1.2.jpg" alt="Familia Corruptos">
+      <img src="1.3.jpg" alt="Familia Redenciones">
+    </div>
+    <button class="next" onclick="moverSlide(1)">❯</button>
+  </section>
+
+  <!-- 🐉 Catálogo completo -->
+  <main>
+<main>
+  <h2>Familias de Dragones</h2>
+
+  <!-- 🧠 Estrategas -->
+  <section class="familia">
+    <h3>Estrategas</h3>
+    <div class="dragones">
+      <div class="dragon"><img src="2.1.jpg" alt="Vendaval"><h4>Vendaval</h4><p>Precio: S/15</p><button onclick="agregarAlCarrito('Vendaval', 15)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="2.2.jpg" alt="Instintus"><h4>Instintus</h4><p>Precio: S/15</p><button onclick="agregarAlCarrito('Instintus', 15)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="2.3.jpg" alt="Purus"><h4>Purus</h4><p>Precio: S/20</p><button onclick="agregarAlCarrito('Purus', 20)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="2.4.jpg" alt="Beau"><h4>Beau</h4><p>Precio: S/15</p><button onclick="agregarAlCarrito('Beau', 15)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="2.5.jpg" alt="Arácnido"><h4>Arácnido</h4><p>Precio: S/15</p><button onclick="agregarAlCarrito('Arácnido', 15)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="2.6.jpg" alt="Mercurio"><h4>Mercurio</h4><p>Precio: S/15</p><button onclick="agregarAlCarrito('Mercurio', 15)">Agregar al carrito</button></div>
+    </div>
+  </section>
+
+  <!-- 🧪 Corruptos -->
+  <section class="familia">
+    <h3>Corruptos</h3>
+    <div class="dragones">
+      <div class="dragon"><img src="3.1.jpg" alt="Metal"><h4>Metal</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Metal', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="3.2.jpg" alt="Mar"><h4>Mar</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Mar', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="3.3.jpg" alt="Eléctrico"><h4>Eléctrico</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Eléctrico', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="3.4.jpg" alt="Fuego"><h4>Fuego</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Fuego', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="3.5.jpg" alt="Hielo"><h4>Hielo</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Hielo', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="3.6.jpg" alt="Natura"><h4>Natura</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Natura', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="3.7.jpg" alt="Primario"><h4>Primario</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Primario', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="3.8.jpg" alt="Bélico"><h4>Bélico</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Bélico', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="3.9.jpg" alt="Leyenda"><h4>Leyenda</h4><p>Precio: S/15</p><button onclick="agregarAlCarrito('Leyenda', 15)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="3.11.jpg" alt="Caos"><h4>Caos</h4><p>Precio: S/15</p><button onclick="agregarAlCarrito('Caos', 15)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="3.12.jpg" alt="Temporal"><h4>Temporal</h4><p>Precio: S/20</p><button onclick="agregarAlCarrito('Temporal', 20)">Agregar al carrito</button></div>
+    </div>
+  </section>
+
+  <!-- 🕊️ Redenciones -->
+  <section class="familia">
+    <h3>Redenciones</h3>
+    <div class="dragones">
+      <div class="dragon"><img src="5.1.jpg" alt="Cuchillas"><h4>Cuchillas</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Cuchillas', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="5.2.jpg" alt="Conquista"><h4>Conquista</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Conquista', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="5.3.jpg" alt="Saqueadora"><h4>Saqueadora</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Saqueadora', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="5.4.jpg" alt="Malicia"><h4>Malicia</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Malicia', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="5.5.jpg" alt="Lobo"><h4>Lobo</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Lobo', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="5.6.jpg" alt="Brutalidad"><h4>Brutalidad</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Brutalidad', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="5.7.jpg" alt="Ira"><h4>Ira</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Ira', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="5.8.jpg" alt="Maldición"><h4>Maldición</h4><p>Precio: S/10</p><button onclick="agregarAlCarrito('Maldición', 10)">Agregar al carrito</button></div>
+      <div class="dragon"><img src="5.9.jpg" alt="Norna"><h4>Norna</h4><p>Precio: S/20</p><button onclick="agregarAlCarrito('Norna', 20)">Agregar al carrito</button></div>
+    </div>
+  </section>
+</main>
+  </main>
+
+  <!-- 🛒 Carrito de compras -->
+  <aside id="carrito">
+    <h2>Carrito de Compras</h2>
+    <ul id="itemsCarrito"></ul>
+    <p>Total: <span id="total">S/0</span></p>
+    <button onclick="comprar()">Comprar</button>
+    <button onclick="cancelarPedido()">Cancelar pedido</button>
+  </aside>
+
+  <!-- 🐾 Footer -->
+  <footer>
+    <p>&copy; 2025 Tienda de Orbes de Dragones | Inspirado por Exe</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
